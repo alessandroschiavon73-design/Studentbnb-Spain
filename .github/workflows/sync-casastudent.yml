@@ -23,6 +23,6 @@ jobs:
           cat > assets/js/studentbnb-brand.js <<'EOF'
           document.addEventListener('DOMContentLoaded',()=>{const f=document.querySelector('.site-footer .container')||document.querySelector('footer');if(f&&!f.querySelector('.casastudent-family')){const b=document.createElement('div');b.className='casastudent-family';b.innerHTML='StudentBnB forma parte de la familia <a href="https://casastudent.es/">CasaStudent ↗</a>';f.appendChild(b)}});
           EOF
-          find . -maxdepth 1 -name '*.html' -print0 | while IFS= read -r -d '' f; do sed -i 's#</head>#<link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=1"></head>#' "$f"; sed -i 's#</body>#<script src="assets/js/studentbnb-brand.js?v=1"></script></body>#' "$f"; sed -i 's#<title>CasaStudent#<title>StudentBnB#g' "$f"; sed -i 's#content="#ffc400"#content="#0F766E"#g' "$f"; done
+          find . -maxdepth 1 -name '*.html' -print0 | while IFS= read -r -d '' f; do sed -i 's#</head>#<link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=1"></head>#' "$f"; sed -i 's#</body>#<script src="assets/js/studentbnb-brand.js?v=1"></script></body>#' "$f"; sed -i 's#<title>CasaStudent#<title>StudentBnB#g' "$f"; sed -i 's|content="#ffc400"|content="#0F766E"|g' "$f"; done
       - run: |
           git config user.name 'StudentBnB Sync'; git config user.email 'actions@github.com'; git add -A; if ! git diff --cached --quiet; then git commit -m 'Sync full CasaStudent structure with StudentBnB branding [skip ci]'; git push; fi
