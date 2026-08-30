@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-label="Mapa universitario ilustrado de España">
+<defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f7fbff"/><stop offset="1" stop-color="#dcefff"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-opacity=".12"/></filter></defs>
+<rect width="760" height="560" rx="34" fill="url(#sea)"/>
+<path d="M111 104 L201 75 L305 85 L385 70 L474 91 L573 137 L626 213 L596 295 L548 348 L500 399 L416 429 L333 420 L276 447 L198 418 L153 365 L123 300 L83 245 L91 175 Z" fill="#ffe58a" stroke="#d8aa00" stroke-width="6" filter="url(#shadow)"/>
+<!-- Portugal cutout --> <path d="M115 174 L157 162 L178 210 L164 285 L181 344 L151 366 L122 301 L84 245 L92 176Z" fill="#edf5f8" stroke="#c5d8df" stroke-width="3"/>
+<!-- Balearic / Canary insets --> <g fill="#ffe58a" stroke="#d8aa00" stroke-width="4"><ellipse cx="650" cy="335" rx="30" ry="16"/><ellipse cx="704" cy="350" rx="18" ry="10"/><ellipse cx="116" cy="500" rx="26" ry="14"/><ellipse cx="163" cy="510" rx="22" ry="12"/></g>
+<g font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#222">
+<g><circle cx="340" cy="260" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="352" y="255">Madrid</text></g>
+<g><circle cx="548" cy="154" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="561" y="150">Barcelona</text></g>
+<g><circle cx="495" cy="306" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="508" y="301">Valencia</text></g>
+<g><circle cx="205" cy="375" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="144" y="399">Sevilla</text></g>
+<g><circle cx="318" cy="395" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="330" y="416">Granada</text></g>
+<g><circle cx="226" cy="235" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="150" y="226">Salamanca</text></g>
+<g><circle cx="449" cy="209" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="460" y="203">Zaragoza</text></g>
+<g><circle cx="349" cy="123" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="365" y="118">Bilbao</text></g>
+<g><circle cx="275" cy="431" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="216" y="454">Málaga</text></g>
+<g><circle cx="469" cy="358" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="481" y="379">Alicante</text></g>
+<g><circle cx="419" cy="385" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="429" y="405">Murcia</text></g>
+<g><circle cx="292" cy="190" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="303" y="183">Valladolid</text></g>
+<g><circle cx="120" cy="147" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="139" y="143">Santiago</text></g>
+<g><circle cx="135" cy="505" r="9" fill="#ffc400" stroke="#222" stroke-width="4"/><text x="178" y="515">La Laguna</text></g>
+</g>
+<g fill="#222" opacity=".82"><path d="M306 295h65v45h-65zM319 260h15v35h25v-35h15v35h15v45h-83v-45h13z"/><path d="M530 198h18v48h18v-68h15v68h18v-52h17v80h-86z"/><path d="M185 325h65v42h-65zM202 280h18v45h15v-65h15v65h18v42h-83v-42h17z"/></g>
+<text x="28" y="42" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="26" fill="#1d2b35">España universitaria</text>
+<text x="28" y="67" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#5f7280">Haz clic en una ciudad para explorar alojamientos</text>
+</svg>

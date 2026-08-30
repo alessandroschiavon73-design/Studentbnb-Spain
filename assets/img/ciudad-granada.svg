@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Granada">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff7cf"/><stop offset="1" stop-color="#ffd85b"/></linearGradient></defs>
+<rect width="800" height="480" rx="28" fill="url(#g)"/><circle cx="660" cy="95" r="54" fill="#ffc400" opacity=".9"/>
+<path d="M0 390 C130 345 250 425 380 380 S640 335 800 385 V480H0Z" fill="#f3b900" opacity=".55"/>
+<g fill="#222" opacity=".9"><path d="M210 360V235h380v125H210z"/><path d="M240 235v-70h70v70m180 0v-85h70v85"/><path d="M200 235l75-55 70 55 70-65 80 65 65-55 40 55"/><rect x="355" y="285" width="85" height="75" fill="#ffc400"/></g>
+<text x="48" y="76" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="38" fill="#1c1c1c">Granada</text>
+<text x="50" y="112" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#5d4a00">StudentBnB España</text>
+</svg>

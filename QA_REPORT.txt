@@ -1,0 +1,18 @@
+STUDENTBNB ESPAÑA DB READY v2 — QA
+=================================
+
+PASS — 9 HTML pages present.
+PASS — 19 active Spanish university city/pole records.
+PASS — every active market has a non-empty barrios/zonas list.
+PASS — 19 clickable hotspots on the illustrated Spain map.
+PASS — preferred legacy map spagna-proposta1.webp restored.
+PASS — legacy representative city photography restored where valid.
+PASS — Valladolid's legacy 0-byte image replaced with Wikimedia Commons source.
+PASS — 6 remote representative images documented in ASSET_CREDITS.txt.
+PASS — no missing local HTML/CSS/JS/image references.
+PASS — app.js, config.js and data.js pass Node syntax checks.
+PASS — generic ciudad.html remains database-ready; no pilot-city dependency.
+PASS — Casa Solidaria, Busco alojamiento and Estudiantes que buscan remain in package.
+PASS — countryCode/cityId/UUID-style records and database-contract.json preserved for unified EU backend.
+
+NOTE — Chromium headless in this container did not complete a screenshot run because of the local browser runtime/DBus environment; static structure, assets and JS were checked instead. Browser visual QA should still be repeated after upload to GitHub Pages at desktop/tablet/mobile widths.

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Bilbao">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff7cf"/><stop offset="1" stop-color="#ffd85b"/></linearGradient></defs>
+<rect width="800" height="480" rx="28" fill="url(#g)"/><circle cx="660" cy="95" r="54" fill="#ffc400" opacity=".9"/>
+<path d="M0 390 C130 345 250 425 380 380 S640 335 800 385 V480H0Z" fill="#f3b900" opacity=".55"/>
+<g fill="#222" opacity=".9"><path d="M170 345c85-145 140-155 220-40 45-150 120-150 240 15-90-35-180-30-260 30-75-45-140-45-200-5z"/><path d="M225 350c100-95 205-95 315 0" fill="none" stroke="#ffc400" stroke-width="18"/></g>
+<text x="48" y="76" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="38" fill="#1c1c1c">Bilbao</text>
+<text x="50" y="112" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#5d4a00">StudentBnB España</text>
+</svg>

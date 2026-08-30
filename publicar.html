@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0F766E">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<title>Publica un anuncio | CasaStudent</title>
+<meta name="description" content="Publica alojamiento para estudiantes indicando claramente alquiler, gastos, duración, fianza y servicios.">
+<link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=1"></head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="CasaStudent home">
+      <span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span>
+      <span>Student<strong>BnB</strong><small>Encuentra tu habitación. Vive tu ciudad.</small></span>
+    </a>
+    <button class="menu-button" aria-label="Abrir el menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html#como-funciona">Cómo funciona</a>
+      <a href="estudiantes.html">Estudiantes que buscan</a>
+      <a class="nav-social-link" href="casa-solidaria.html">Casa solidaria</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a class="nav-feature-link" href="busco.html">Busco alojamiento</a>
+      <a class="header-cta" href="publicar.html">Publica gratis</a>
+      <a class="account-link" href="#" data-login>♙ <span data-account-label>Acceder</span></a>
+    </nav>
+  </div>
+</header>
+<main class="form-shell">
+  <div class="container">
+    <div class="form-heading">
+      <span class="kicker">Oferta clara, contacto directo</span>
+      <h1>Publica tu anuncio</h1>
+      <p>Completa los campos para que el estudiante pueda entender y comparar realmente la oferta.</p>
+    </div>
+    <div class="progress five" aria-label="Pasos del formulario">
+      <div class="progress-step active" data-step="1"><span>Alojamiento</span></div>
+      <div class="progress-step active" data-step="2"><span>Costes</span></div>
+      <div class="progress-step active" data-step="3"><span>Condiciones</span></div>
+      <div class="progress-step active" data-step="4"><span>Convivencia</span></div>
+      <div class="progress-step active" data-step="5"><span>Contacto</span></div>
+    </div>
+
+    <form id="publish-form" class="publish-form"><input type="hidden" name="countryCode" value="ES">
+      <section class="form-section card">
+        <h2>1. Alojamiento y ubicación</h2>
+        <p>Indica qué se alquila y dónde está.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="city">Ciudad *</label><select id="city" name="city" required><option value="">Selecciona</option></select></div>
+          <div class="field"><label for="zone">Barrio/zona *</label><select id="zone" name="zone" required><option value="">Primero selecciona la ciudad</option></select></div>
+          <div class="field"><label for="type">Tipo *</label><select id="type" name="type" required><option value="">Selecciona</option><option>Habitación individual</option><option>Plaza en habitación compartida</option><option>Apartamento de 1 dormitorio</option><option>Estudio</option><option>Piso (3 habitaciones)</option></select></div>
+          <div class="field"><label for="arrangement">Modalidad *</label><select id="arrangement" name="arrangement" required><option>En piso compartido</option><option>Piso completo</option><option>Residencia de estudiantes</option><option>Todo incluido</option><option>Alojamiento intergeneracional</option></select></div>
+          <div class="field"><label for="surface">Superficie de la habitación (m²)</label><input id="surface" name="surface" type="number" min="5" max="100"></div>
+          <div class="field"><label for="apartmentSurface">Superficie del alojamiento (m²)</label><input id="apartmentSurface" name="apartmentSurface" type="number" min="10" max="500"></div>
+          <div class="field"><label for="roommates">Número de convivientes</label><input id="roommates" name="roommates" type="number" min="0" max="20" value="2"></div>
+          <div class="field"><label for="floor">Planta</label><input id="floor" name="floor" placeholder="Ej. 2.ª con ascensor"></div>
+          <div class="field"><label for="university">Universidad/facultad cercana</label><input id="university" name="university" placeholder="Ej. Ingeniería"></div>
+          <div class="field"><label for="universityMinutes">Distancia a la universidad (min)</label><input id="universityMinutes" name="universityMinutes" type="number" min="0" max="120"></div>
+          <div class="field"><label for="centerMinutes">Distancia al centro (min)</label><input id="centerMinutes" name="centerMinutes" type="number" min="0" max="120"></div>
+          <div class="field"><label for="tag">Característica breve</label><input id="tag" name="tag" placeholder="Ej. cerca del metro"></div>
+          <div class="field"><label for="available">Disponible desde *</label><input id="available" name="available" type="date" required></div>
+        </div>
+        <div class="photo-upload-wrap">
+          <div class="field"><label for="photos">Fotografías del alojamiento *</label><input id="photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple required></div>
+          <p>Sube de 1 a 8 fotografías. La primera se utilizará como portada del anuncio.</p>
+          <div id="photo-preview" class="photo-preview" aria-live="polite"></div>
+          <div id="photo-status" class="map-selection-status">Ninguna fotografía seleccionada.</div>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>2. Costes reales</h2>
+        <p>El precio debe ser comparable: especifica qué está incluido y qué queda fuera.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="price">Alquiler mensual (€) *</label><input id="price" name="price" type="number" min="1" required></div>
+          <div class="field"><label for="expenses-included">¿Gastos incluidos? *</label><select id="expenses-included" name="expensesIncluded" required><option value="yes">Sí, incluidos</option><option value="no">No, aparte</option></select></div>
+          <div class="field hidden" id="expense-amount-wrap"><label for="expenses">Estimación de gastos mensuales (€)</label><input id="expenses" name="expenses" type="number" min="0"></div>
+          <div class="field"><label for="deposit">Fianza (€)</label><input id="deposit" name="deposit" type="number" min="0"></div>
+          <div class="field"><label for="publisher-type">Tipo de anunciante *</label><select id="publisher-type" name="publisherType" required><option>Particular</option><option>Agencia</option><option>Residencia/Gestor</option></select></div>
+          <div class="field hidden" id="agency-fee-wrap"><label for="agencyFee">Honorarios de agencia *</label><input id="agencyFee" name="agencyFee" placeholder="Ej. una mensualidad + IVA"></div>
+        </div>
+        <span class="field-label">¿Qué costes están incluidos?</span>
+        <div class="checkbox-grid" style="margin-top:9px">
+          <label class="check-option"><input type="checkbox" name="bills" value="Comunidad"> Comunidad</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Calefacción"> Calefacción</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Agua"> Agua</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Electricidad"> Electricidad</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Gas"> Gas</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Tasa de residuos"> Tasa de residuos</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Internet Wi‑Fi"> Internet Wi‑Fi</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Limpieza periódica"> Limpieza periódica</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Mantenimiento ordinario"> Mantenimiento ordinario</label>
+        </div>
+        <div id="intergenerational-host-fields" class="intergenerational-fields hidden">
+          <h3>Alojamiento solidario intergeneracional</h3>
+          <p>Define claramente el alquiler reducido y la pequeña ayuda acordada con el estudiante.</p>
+          <div class="checkbox-grid">
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Compañía y conversación"> Compañía y conversación</label>
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Compra o pequeños recados"> Compra o pequeños recados</label>
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Ayuda con móvil y ordenador"> Ayuda con móvil y ordenador</label>
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Pequeñas tareas domésticas compartidas"> Pequeñas tareas domésticas compartidas</label>
+            <label class="check-option"><input type="checkbox" name="intergenerationalHelp" value="Presencia ocasional por la tarde/noche"> Presencia ocasional por la tarde/noche</label>
+          </div>
+          <div class="form-grid" style="margin-top:16px">
+            <div class="field"><label for="intergenerational-hours">Tiempo máximo orientativo</label><select id="intergenerational-hours" name="intergenerationalHours"><option>1–2 horas por semana</option><option>3–4 horas por semana</option><option>5–6 horas por semana</option></select></div>
+            <div class="field"><label for="intergenerational-discount">Reducción mensual respecto al alquiler habitual (€)</label><input id="intergenerational-discount" name="intergenerationalDiscount" type="number" min="0"></div>
+            <div class="field full"><label for="intergenerational-notes">¿Cómo imaginas la convivencia?</label><textarea id="intergenerational-notes" name="intergenerationalNotes" rows="4" placeholder="Ej. Me gustaría cenar juntos una vez por semana y recibir ayuda ocasional con el móvil."></textarea></div>
+          </div>
+          <span class="micro-note">No se pueden solicitar cuidados sanitarios o personales, administración de medicamentos, vigilancia continua ni servicios profesionales.</span>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>3. Contrato, salida y servicios</h2>
+        <p>La estancia mínima y el preaviso influyen en la flexibilidad real de la oferta.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="contract">Tipo de contrato *</label><input id="contract" name="contract" required placeholder="Ej. temporada / estudiantes"></div>
+          <div class="field"><label for="minimumStay">Estancia mínima *</label><input id="minimumStay" name="minimumStay" required placeholder="Ej. 6 meses"></div>
+          <div class="field"><label for="notice">Preaviso para dejar el alojamiento *</label><input id="notice" name="notice" required placeholder="Ej. 3 meses"></div>
+          <div class="field"><label for="heating">Calefacción</label><select id="heating" name="heating"><option>Individual</option><option>Central</option><option>Bomba de calor</option><option>No disponible</option></select></div>
+          <div class="field"><label for="airConditioning">Aire acondicionado</label><select id="airConditioning" name="airConditioning"><option>No</option><option>Sí</option><option>Solo en algunas habitaciones</option></select></div>
+          <div class="field"><label for="wifi">Wi‑Fi</label><select id="wifi" name="wifi"><option>Sí – Fibra</option><option>Sí</option><option>No</option></select></div>
+          <div class="field"><label for="pets">Mascotas</label><select id="pets" name="pets"><option>No permitidas</option><option>Permitidas</option><option>A convenir</option></select></div>
+          <div class="field"><label for="smokers">Tabaco</label><select id="smokers" name="smokers"><option>No permitidas</option><option>Permitidas</option><option>Solo en el exterior</option></select></div>
+          <div class="field full"><label for="description">Descripción completa *</label><textarea id="description" name="description" rows="6" required placeholder="Describe el alojamiento, mobiliario, convivencia, zona y comunicaciones."></textarea></div>
+          <div class="field"><label for="rules">Normas de la casa (una por línea)</label><textarea id="rules" name="rules" rows="5" placeholder="Respeto de los espacios comunes&#10;Sin fiestas"></textarea></div>
+          <div class="field"><label for="nearby">Servicios cercanos (uno por línea)</label><textarea id="nearby" name="nearby" rows="5" placeholder="Supermercado: 3 min&#10;Parada de autobús: 2 min"></textarea></div>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>4. Perfil de convivencia</h2>
+        <p>Ayuda al estudiante a entender no solo cómo es la vivienda, sino con quién vivirá y qué ambiente encontrará.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="householdComposition">¿Quién vive ya en casa?</label><input id="householdComposition" name="householdComposition" placeholder="Ej. 2 estudiantes y 1 trabajador"></div>
+          <div class="field"><label for="householdAge">Edad aproximada</label><input id="householdAge" name="householdAge" placeholder="Ej. 21–26 años"></div>
+          <div class="field"><label for="householdLanguages">Idiomas</label><input id="householdLanguages" name="householdLanguages" placeholder="Ej. español, inglés, italiano"></div>
+          <div class="field"><label for="householdAtmosphere">Ambiente de la casa</label><select id="householdAtmosphere" name="householdAtmosphere"><option>Equilibrado y sociable</option><option>Tranquilo y estudioso</option><option>Social e internacional</option><option>Solo compartir gastos</option><option>Por crear – piso vacío</option></select></div>
+          <div class="field"><label for="householdCleanliness">Organización de la limpieza</label><select id="householdCleanliness" name="householdCleanliness"><option>Turnos semanales</option><option>Calendario compartido</option><option>Limpieza individual</option><option>Servicio de limpieza</option><option>A convenir</option></select></div>
+          <div class="field"><label for="householdGuests">Visitas</label><select id="householdGuests" name="householdGuests"><option>Ocasionales y avisando</option><option>Permitidas libremente</option><option>Limitadas</option><option>No permitidas</option><option>A convenir</option></select></div>
+          <div class="field"><label for="householdCooking">Cocina y comidas</label><select id="householdCooking" name="householdCooking"><option>Principalmente independientes</option><option>Se cocina juntos a menudo</option><option>Cenas comunes el fin de semana</option><option>Cocina poco utilizada</option><option>A convenir</option></select></div>
+          <div class="field full"><label for="householdDescription">Presenta a los convivientes y la vida en casa</label><textarea id="householdDescription" name="householdDescription" rows="5" placeholder="Ej. En casa viven dos estudiantes de Ingeniería. El ambiente es tranquilo entre semana y a veces cenamos juntos. Buscamos una persona ordenada y respetuosa."></textarea><span class="profile-help">Evita criterios discriminatorios: describe hábitos y convivencia, no categorías personales protegidas.</span></div>
+        </div>
+        <span class="field-label">Intereses en casa</span>
+        <div class="checkbox-grid" style="margin-top:9px">
+          <label class="check-option"><input type="checkbox" name="householdInterests" value="Estudio"> Estudio</label>
+          <label class="check-option"><input type="checkbox" name="householdInterests" value="Deporte"> Deporte</label>
+          <label class="check-option"><input type="checkbox" name="householdInterests" value="Cine"> Cine</label>
+          <label class="check-option"><input type="checkbox" name="householdInterests" value="Cenas en casa"> Cenas en casa</label>
+          <label class="check-option"><input type="checkbox" name="householdInterests" value="Música"> Música</label>
+          <label class="check-option"><input type="checkbox" name="householdInterests" value="Viajes y Erasmus"> Viajes y Erasmus</label>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>5. Contacto</h2>
+        <p>Los datos de contacto solo estarán disponibles para usuarios que hayan iniciado sesión.</p>
+        <div class="form-grid">
+          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
+          <div class="field"><label for="phone">Teléfono</label><input id="phone" name="phone"></div>
+          <div class="field"><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" placeholder="Ej. +34 612 345 678"></div>
+        </div>
+        <div class="notice"><strong>Nota sobre el prototipo:</strong> la publicación guarda el anuncio en el navegador y lo muestra en la ciudad seleccionada en este dispositivo. La versión conectada utilizará el backend y la base de datos europea común.</div>
+        <div class="form-actions">
+          <button class="btn btn-white" id="preview-button" type="button">Vista previa</button>
+          <button class="btn btn-yellow" type="submit">Guardar y publicar</button>
+        </div>
+        <div id="publish-preview" class="preview-box"></div>
+        <div id="publish-success" class="success-message" role="status"></div>
+      </section>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer" id="contacto">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="font-size:27px"><span>Student<strong>BnB</strong></span></a>
+        <p>La plataforma dedicada al alojamiento universitario: costes, condiciones y servicios comparables con claridad.</p>
+      </div>
+      <div><h3>Explora</h3><div class="footer-links"><a href="ciudad.html">Alojamientos en España</a><a href="estudiantes.html">Estudiantes que buscan</a><a href="busco.html">Busco alojamiento</a><a href="casa-solidaria.html">Alojamiento solidario</a><a href="publicar.html">Publicar anuncio</a></div></div>
+      <div><h3>Proyecto</h3><div class="footer-links"><a href="index.html#como-funciona">Cómo funciona</a><a href="index.html#quienes-somos">Quiénes somos</a><a href="index.html#faq">Preguntas frecuentes</a></div></div>
+      <div><h3>Seguridad</h3><div class="footer-links"><a href="privacidad.html">Privacidad y condiciones</a><a href="privacidad.html#seguridad">Prevención de fraudes</a><a href="mailto:reportes@casastudent.es">Reportar un anuncio</a></div></div>
+    </div>
+    <div class="footer-international"><strong>CasaStudent en Europa</strong><div class="footer-country-links"><a href="https://casastudent.it/" target="_blank" rel="noopener"><span aria-hidden="true">🇮🇹</span> Italia</a><a href="index.html" aria-current="page"><span aria-hidden="true">🇪🇸</span> España</a><a href="https://casastudent.fr/" target="_blank" rel="noopener"><span aria-hidden="true">🇫🇷</span> Francia</a><a href="https://casastudent.de/" target="_blank" rel="noopener"><span aria-hidden="true">🇩🇪</span> Alemania</a><a href="https://casastudent.pl/" target="_blank" rel="noopener"><span aria-hidden="true">🇵🇱</span> Polonia</a></div></div>
+    <div class="footer-bottom"><span>© 2026 CasaStudent</span><span>España · casastudent.es</span></div>
+  </div>
+</footer>
+<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+  <div class="modal">
+    <button class="modal-close" data-close-modal aria-label="Chiudi">×</button>
+    <h2 id="login-title">Accede a CasaStudent</h2>
+    <p>Guarda búsquedas y favoritos y utiliza los contactos protegidos.</p>
+    <form id="login-form">
+      <div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nombre@email.es"></div>
+      <button class="btn btn-yellow btn-block" type="submit">Continuar</button>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/config.js"></script><script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/studentbnb-brand.js?v=1"></script></body>
+</html>

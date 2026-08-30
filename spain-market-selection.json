@@ -1,0 +1,404 @@
+{
+  "country": "ES",
+  "thresholdRule": "20k+",
+  "selectedCount": 19,
+  "selected": [
+    {
+      "id": "city_es_madrid",
+      "slug": "madrid",
+      "name": "Madrid",
+      "region": "Comunidad de Madrid",
+      "marketType": "metropolitan",
+      "zones": [
+        "Argüelles",
+        "Centro–Malasaña",
+        "Chamberí",
+        "Ciudad Universitaria",
+        "La Latina",
+        "Lavapiés",
+        "Moncloa",
+        "Retiro",
+        "Salamanca",
+        "Tetuán",
+        "Vallecas",
+        "Vicálvaro"
+      ]
+    },
+    {
+      "id": "city_es_barcelona",
+      "slug": "barcelona",
+      "name": "Barcelona",
+      "region": "Cataluña",
+      "marketType": "metropolitan",
+      "zones": [
+        "Ciutat Vella",
+        "Eixample",
+        "Gràcia",
+        "Horta–Guinardó",
+        "Les Corts",
+        "Poblenou",
+        "Poble-sec",
+        "Sarrià–Sant Gervasi",
+        "Sants–Montjuïc",
+        "Sant Andreu",
+        "Sant Martí",
+        "Zona Universitària"
+      ]
+    },
+    {
+      "id": "city_es_valencia",
+      "slug": "valencia",
+      "name": "Valencia",
+      "region": "Comunitat Valenciana",
+      "marketType": "city",
+      "zones": [
+        "Algirós",
+        "Benimaclet",
+        "Benicalap",
+        "Campanar",
+        "Ciutat Vella",
+        "El Cabanyal",
+        "Extramurs",
+        "La Saïdia",
+        "L’Eixample",
+        "Malilla",
+        "Mestalla",
+        "Patraix",
+        "Quatre Carreres",
+        "Ruzafa"
+      ]
+    },
+    {
+      "id": "city_es_sevilla",
+      "slug": "sevilla",
+      "name": "Sevilla",
+      "region": "Andalucía",
+      "marketType": "city",
+      "zones": [
+        "Alameda",
+        "Bellavista",
+        "Cerro del Águila",
+        "El Porvenir",
+        "La Cartuja",
+        "Los Bermejales",
+        "Los Remedios",
+        "Macarena",
+        "Nervión",
+        "Prado de San Sebastián",
+        "San Bernardo",
+        "Santa Cruz",
+        "Triana"
+      ]
+    },
+    {
+      "id": "city_es_granada",
+      "slug": "granada",
+      "name": "Granada",
+      "region": "Andalucía",
+      "marketType": "city",
+      "zones": [
+        "Albaicín",
+        "Beiro",
+        "Camino de Ronda",
+        "Centro–Realejo",
+        "Cerrillo de Maracena",
+        "Chana",
+        "Fígares",
+        "La Cartuja",
+        "Pajaritos",
+        "Plaza de Toros",
+        "Ronda",
+        "Zaidín"
+      ]
+    },
+    {
+      "id": "city_es_zaragoza",
+      "slug": "zaragoza",
+      "name": "Zaragoza",
+      "region": "Aragón",
+      "marketType": "city",
+      "zones": [
+        "Actur",
+        "Centro",
+        "Delicias",
+        "La Almozara",
+        "La Magdalena",
+        "Las Fuentes",
+        "Romareda",
+        "San José",
+        "Universidad",
+        "Valdespartera",
+        "Torrero",
+        "Casco Histórico"
+      ]
+    },
+    {
+      "id": "city_es_malaga",
+      "slug": "malaga",
+      "name": "Málaga",
+      "region": "Andalucía",
+      "marketType": "city",
+      "zones": [
+        "Carretera de Cádiz",
+        "Centro Histórico",
+        "Cruz de Humilladero",
+        "El Ejido",
+        "El Palo",
+        "Huelin",
+        "La Malagueta",
+        "La Merced",
+        "Pedregalejo",
+        "Teatinos",
+        "Victoria"
+      ]
+    },
+    {
+      "id": "city_es_murcia",
+      "slug": "murcia",
+      "name": "Murcia",
+      "region": "Región de Murcia",
+      "marketType": "city",
+      "zones": [
+        "Centro",
+        "El Carmen",
+        "Espinardo",
+        "Infante Juan Manuel",
+        "La Flota",
+        "La Fama",
+        "La Merced",
+        "San Andrés",
+        "San Antón",
+        "Santa Eulalia",
+        "Vistalegre"
+      ]
+    },
+    {
+      "id": "city_es_alicante",
+      "slug": "alicante",
+      "name": "Alicante–San Vicente",
+      "region": "Comunitat Valenciana",
+      "marketType": "university_pole",
+      "zones": [
+        "Benalúa",
+        "Campoamor",
+        "Carolinas Altas/Bajas",
+        "Centro",
+        "Ensanche–Diputación",
+        "Mercado",
+        "Playa de San Juan",
+        "San Blas",
+        "San Vicente del Raspeig / Campus",
+        "Vistahermosa"
+      ]
+    },
+    {
+      "id": "city_es_salamanca",
+      "slug": "salamanca",
+      "name": "Salamanca",
+      "region": "Castilla y León",
+      "marketType": "city",
+      "zones": [
+        "Centro Histórico",
+        "Garrido Norte",
+        "Garrido Sur",
+        "Pizarrales",
+        "San Bernardo",
+        "San José",
+        "San Vicente",
+        "Tejares",
+        "Van Dyck",
+        "Vidal",
+        "Campus Miguel de Unamuno"
+      ]
+    },
+    {
+      "id": "city_es_santiago_de_compostela",
+      "slug": "santiago-de-compostela",
+      "name": "Santiago de Compostela",
+      "region": "Galicia",
+      "marketType": "university_pole",
+      "zones": [
+        "Campus Norte",
+        "Campus Sur",
+        "Casco Histórico",
+        "Conxo",
+        "Ensanche",
+        "Fontiñas",
+        "O Castiñeiriño",
+        "San Lázaro",
+        "Santa Marta",
+        "Vista Alegre"
+      ]
+    },
+    {
+      "id": "city_es_valladolid",
+      "slug": "valladolid",
+      "name": "Valladolid",
+      "region": "Castilla y León",
+      "marketType": "university_pole",
+      "zones": [
+        "Arturo Eyries",
+        "Centro",
+        "Covaresa",
+        "Delicias",
+        "Huerta del Rey",
+        "La Rondilla",
+        "Parquesol",
+        "Pilarica",
+        "Pinar de Jalón",
+        "San Juan",
+        "Universidad"
+      ]
+    },
+    {
+      "id": "city_es_bilbao",
+      "slug": "bilbao",
+      "name": "Bilbao–Leioa",
+      "region": "País Vasco",
+      "marketType": "university_pole",
+      "zones": [
+        "Abando",
+        "Basurto",
+        "Begoña",
+        "Casco Viejo",
+        "Deusto",
+        "Indautxu",
+        "Irala",
+        "Rekalde",
+        "San Francisco",
+        "Santutxu",
+        "Uribarri",
+        "Leioa / Campus UPV-EHU"
+      ]
+    },
+    {
+      "id": "city_es_cordoba",
+      "slug": "cordoba",
+      "name": "Córdoba",
+      "region": "Andalucía",
+      "marketType": "university_pole",
+      "zones": [
+        "Centro",
+        "Ciudad Jardín",
+        "El Brillante",
+        "Fátima",
+        "Fuensanta",
+        "Huerta de la Reina",
+        "Levante",
+        "Noreña",
+        "Poniente",
+        "San Basilio",
+        "Santa Marina",
+        "Rabanales / Campus"
+      ]
+    },
+    {
+      "id": "city_es_pamplona",
+      "slug": "pamplona",
+      "name": "Pamplona",
+      "region": "Navarra",
+      "marketType": "city",
+      "zones": [
+        "Casco Antiguo",
+        "Ensanche",
+        "Iturrama",
+        "San Juan",
+        "Mendebaldea",
+        "Azpilagaña",
+        "Milagrosa",
+        "Rochapea",
+        "Mendillorri",
+        "Arrosadia / UPNA"
+      ]
+    },
+    {
+      "id": "city_es_la_laguna",
+      "slug": "la-laguna",
+      "name": "La Laguna–Santa Cruz",
+      "region": "Canarias",
+      "marketType": "university_pole",
+      "zones": [
+        "Casco de La Laguna",
+        "La Cuesta",
+        "Taco",
+        "Finca España",
+        "Geneto",
+        "Guajara",
+        "La Verdellada",
+        "Campus Central",
+        "Santa Cruz Centro",
+        "La Salle",
+        "Ofra"
+      ]
+    },
+    {
+      "id": "city_es_oviedo",
+      "slug": "oviedo",
+      "name": "Oviedo–Gijón",
+      "region": "Asturias",
+      "marketType": "university_pole",
+      "zones": [
+        "Oviedo Centro",
+        "El Cristo–Buenavista",
+        "La Argañosa",
+        "Pumarín",
+        "La Corredoria",
+        "Tenderina",
+        "Montecerrao",
+        "Vallobín",
+        "Gijón Centro",
+        "El Llano",
+        "Viesques",
+        "Campus de Gijón"
+      ]
+    },
+    {
+      "id": "city_es_alcala_de_henares",
+      "slug": "alcala-de-henares",
+      "name": "Alcalá de Henares",
+      "region": "Comunidad de Madrid",
+      "marketType": "university_pole",
+      "zones": [
+        "Centro Histórico",
+        "Reyes Católicos",
+        "Venecia",
+        "El Val",
+        "Espartales",
+        "La Garena",
+        "Ensanche",
+        "Campus Científico-Tecnológico"
+      ]
+    },
+    {
+      "id": "city_es_cadiz",
+      "slug": "cadiz",
+      "name": "Cádiz–Puerto Real",
+      "region": "Andalucía",
+      "marketType": "university_pole",
+      "zones": [
+        "Centro Histórico",
+        "La Viña",
+        "El Mentidero",
+        "Santa María",
+        "La Laguna",
+        "Segunda Aguada",
+        "Bahía Blanca",
+        "Puntales",
+        "Puerto Real Centro",
+        "Campus Río San Pedro"
+      ]
+    }
+  ],
+  "borderlineExcluded": [
+    "Vigo (around the 20k line depending level/year; excluded under strict >20k rule)",
+    "A Coruña",
+    "Las Palmas de Gran Canaria",
+    "Palma",
+    "Tarragona",
+    "Girona",
+    "Castellón de la Plana",
+    "Santander",
+    "San Sebastián"
+  ],
+  "methodNote": "Use official SIIU/Ministerio data by university and academic level, then map campuses to coherent housing markets. Revalidate annually before production."
+}

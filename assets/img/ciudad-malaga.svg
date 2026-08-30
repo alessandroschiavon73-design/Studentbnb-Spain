@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Málaga">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff7cf"/><stop offset="1" stop-color="#ffd85b"/></linearGradient></defs>
+<rect width="800" height="480" rx="28" fill="url(#g)"/><circle cx="660" cy="95" r="54" fill="#ffc400" opacity=".9"/>
+<path d="M0 390 C130 345 250 425 380 380 S640 335 800 385 V480H0Z" fill="#f3b900" opacity=".55"/>
+<g fill="#222" opacity=".9"><path d="M205 360V260h390v100H205z"/><path d="M245 260v-95h75v95m210 0v-115h45v115"/><path d="M195 260l80-60 80 60 75-55 85 55 50-55 40 55"/><circle cx="655" cy="125" r="40" fill="#222"/></g>
+<text x="48" y="76" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="38" fill="#1c1c1c">Málaga</text>
+<text x="50" y="112" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#5d4a00">StudentBnB España</text>
+</svg>

@@ -1,1 +1,190 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0F766E"><title>StudentBnB España — a CasaStudent project</title><link rel="stylesheet" href="assets/css/style.css"></head><body><header><div class="brand">Student<span>BnB</span><small style="display:block;font-size:10px;font-weight:600;letter-spacing:.03em;color:#ccfbf1">a CasaStudent project</small></div><nav><a href="#ciudades">Ciudades</a><a href="#como">Cómo funciona</a><a href="https://casastudent.es/">CasaStudent</a><a href="https://casastudent.es/pubblica.html">Publicar</a></nav></header><main><section class="hero"><span class="pill">España · CasaStudent network</span><h1>Tu base universitaria, ciudad por ciudad.</h1><p>Encuentra habitaciones, pisos y compañeros en las principales ciudades universitarias de España. StudentBnB mantiene una identidad propia dentro de la misma red y experiencia CasaStudent.</p><a class="cta" href="#ciudades">Explorar ciudades</a></section><section class="section"><div class="grid"><article class="card"><h3>StudentBnB</h3><p>La cara más joven e internacional de la red.</p></article><article class="card"><h3>CasaStudent</h3><p>La plataforma de referencia con la misma lógica de anuncios, ciudades y servicios.</p><a href="https://casastudent.es/">Ir a CasaStudent →</a></article></div></section><section class="section" id="ciudades"><h2>Ciudades universitarias</h2><div class="grid"><article class="card"><h3>Madrid</h3><p>Alojamiento y oportunidades para estudiantes.</p></article><article class="card"><h3>Barcelona</h3><p>Habitaciones y pisos cerca de las universidades.</p></article><article class="card"><h3>Valencia</h3><p>Encuentra tu solución para estudiar y vivir.</p></article><article class="card"><h3>Sevilla</h3><p>Anuncios y contactos en un solo lugar.</p></article></div></section><section class="section" id="como"><h2>Cómo funciona</h2><div class="grid"><article class="card"><h3>1. Elige ciudad</h3><p>Empieza por tu destino universitario.</p></article><article class="card"><h3>2. Encuentra alojamiento</h3><p>Compara rápidamente las opciones.</p></article><article class="card"><h3>3. Contacta</h3><p>Habla directamente con quien publica el anuncio.</p></article></div></section></main><footer><strong>StudentBnB</strong> · España · <a style="color:inherit" href="https://casastudent.es/">a CasaStudent project</a></footer></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0F766E">
+<link rel="stylesheet" href="assets/css/style.css?v=20260824-map-soft-fade">
+
+<title>StudentBnB — Encuentra alojamiento en tu ciudad universitaria</title>
+<meta name="description" content="Habitaciones y pisos para estudiantes en las principales ciudades universitarias españolas, con costes y condiciones comparables.">
+<link rel="stylesheet" href="assets/css/studentbnb-brand.css?v=1"></head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="CasaStudent home">
+      <span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span>
+      <span>Student<strong>BnB</strong><small>Encuentra tu habitación. Vive tu ciudad.</small></span>
+    </a>
+    <button class="menu-button" aria-label="Abrir el menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html#como-funciona">Cómo funciona</a>
+      <a href="estudiantes.html">Estudiantes que buscan</a>
+      <a class="nav-social-link" href="casa-solidaria.html">Casa solidaria</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a class="nav-feature-link" href="busco.html">Busco alojamiento</a>
+      <a class="header-cta" href="publicar.html">Publica gratis</a>
+      <a class="account-link" href="#" data-login>♙ <span data-account-label>Acceder</span></a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="home-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Encuentra tu<br>habitación en tu<br><span>ciudad universitaria</span></h1>
+        <p>El punto de encuentro entre estudiantes y propietarios. Sencillo, transparente y gratuito.</p>
+        <form class="search-card" id="home-search">
+          <h2>¿Dónde estudias?</h2>
+          <p>Selecciona la ciudad y el tipo de alojamiento.</p>
+          <div class="field">
+            <label for="home-city">Ciudad universitaria</label>
+            <select id="home-city" name="city">
+              <option value="madrid">Madrid</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="home-type">¿Qué buscas?</label>
+            <select id="home-type" name="type">
+              <option value="">Todos los tipos</option>
+              <option value="Habitación individual">Habitación individual</option>
+              <option value="Plaza en habitación compartida">Plaza en habitación compartida</option>
+              <option value="Apartamento de 1 dormitorio">Apartamento de 1 dormitorio</option>
+              <option value="Piso">Piso</option>
+            </select>
+          </div>
+          <button class="btn btn-yellow btn-block" type="submit">Buscar anuncios</button>
+        </form>
+        <div class="hero-market-actions" aria-label="Otras acciones principales">
+          <a href="busco.html"><strong>Busco alojamiento</strong><small>Publica tu búsqueda</small></a>
+          <a href="publicar.html"><strong>Ofrezco alojamiento</strong><small>Encuentra un estudiante</small></a>
+        </div>
+        <div class="explore-map"><span class="explore-arrow">↗</span><span>O explora el mapa</span></div>
+      </div>
+      <div class="map-stage spain-map blended-map" aria-label="Mapa ilustrado de los principales polos universitarios españoles">
+        <img src="assets/img/spagna-proposta1.webp" alt="Mapa ilustrado de España con ciudades, islas y monumentos">
+        <a class="map-hotspot hot-santiago" href="ciudad.html?city=santiago-de-compostela" aria-label="Abrir alojamientos de Santiago de Compostela"><span>Santiago</span></a>
+        <a class="map-hotspot hot-oviedo" href="ciudad.html?city=oviedo" aria-label="Abrir alojamientos de Oviedo–Gijón"><span>Oviedo–Gijón</span></a>
+        <a class="map-hotspot hot-bilbao" href="ciudad.html?city=bilbao" aria-label="Abrir alojamientos de Bilbao–Leioa"><span>Bilbao–Leioa</span></a>
+        <a class="map-hotspot hot-pamplona" href="ciudad.html?city=pamplona" aria-label="Abrir alojamientos de Pamplona"><span>Pamplona</span></a>
+        <a class="map-hotspot hot-valladolid" href="ciudad.html?city=valladolid" aria-label="Abrir alojamientos de Valladolid"><span>Valladolid</span></a>
+        <a class="map-hotspot hot-salamanca" href="ciudad.html?city=salamanca" aria-label="Abrir alojamientos de Salamanca"><span>Salamanca</span></a>
+        <a class="map-hotspot hot-madrid" href="ciudad.html?city=madrid" aria-label="Abrir alojamientos de Madrid"><span>Madrid</span></a>
+        <a class="map-hotspot hot-alcala" href="ciudad.html?city=alcala-de-henares" aria-label="Abrir alojamientos de Alcalá de Henares"><span>Alcalá</span></a>
+        <a class="map-hotspot hot-zaragoza" href="ciudad.html?city=zaragoza" aria-label="Abrir alojamientos de Zaragoza"><span>Zaragoza</span></a>
+        <a class="map-hotspot hot-barcelona" href="ciudad.html?city=barcelona" aria-label="Abrir alojamientos de Barcelona"><span>Barcelona</span></a>
+        <a class="map-hotspot hot-valencia" href="ciudad.html?city=valencia" aria-label="Abrir alojamientos de Valencia"><span>Valencia</span></a>
+        <a class="map-hotspot hot-cordoba" href="ciudad.html?city=cordoba" aria-label="Abrir alojamientos de Córdoba"><span>Córdoba</span></a>
+        <a class="map-hotspot hot-sevilla" href="ciudad.html?city=sevilla" aria-label="Abrir alojamientos de Sevilla"><span>Sevilla</span></a>
+        <a class="map-hotspot hot-cadiz" href="ciudad.html?city=cadiz" aria-label="Abrir alojamientos de Cádiz–Puerto Real"><span>Cádiz</span></a>
+        <a class="map-hotspot hot-granada" href="ciudad.html?city=granada" aria-label="Abrir alojamientos de Granada"><span>Granada</span></a>
+        <a class="map-hotspot hot-malaga" href="ciudad.html?city=malaga" aria-label="Abrir alojamientos de Málaga"><span>Málaga</span></a>
+        <a class="map-hotspot hot-alicante" href="ciudad.html?city=alicante" aria-label="Abrir alojamientos de Alicante–San Vicente"><span>Alicante</span></a>
+        <a class="map-hotspot hot-murcia" href="ciudad.html?city=murcia" aria-label="Abrir alojamientos de Murcia"><span>Murcia</span></a>
+        <a class="map-hotspot hot-la-laguna" href="ciudad.html?city=la-laguna" aria-label="Abrir alojamientos de La Laguna–Santa Cruz"><span>La Laguna</span></a>
+      </div>
+    </div>
+    <div class="container value-strip" id="como-funciona">
+      <div class="value-item"><span class="icon-circle">🎓</span><div><h3>Para estudiantes</h3><p>Encuentra una oferta o <a href="busco.html" style="text-decoration:underline">publica lo que buscas</a>.</p></div></div>
+      <div class="value-item"><span class="icon-circle">⌂</span><div><h3>Para propietarios</h3><p>Publica el alojamiento o consulta a los <a href="estudiantes.html" style="text-decoration:underline">estudiantes interesados</a>.</p></div></div>
+      <div class="value-item"><span class="icon-circle">♡</span><div><h3>Comparación transparente</h3><p>Alquiler, gastos, fianza, duración y preaviso.</p></div></div>
+    </div>
+  </section>
+
+  <section class="solidarity-home" id="casa-solidale">
+    <div class="container solidarity-home-grid">
+      <div class="solidarity-visual" aria-hidden="true"><span>👵</span><b>+</b><span>🎓</span></div>
+      <div>
+        <span class="kicker">Alojamiento solidario entre generaciones</span>
+        <h2>Una habitación, una presencia que suma</h2>
+        <p>Una persona mayor puede ofrecer una habitación a precio reducido a un estudiante a cambio de compañía y de una pequeña ayuda acordada en la vida cotidiana.</p>
+        <div class="solidarity-points"><span>✓ Alquiler reducido</span><span>✓ Acuerdos claros</span><span>✓ Sin cuidados sanitarios</span></div>
+      </div>
+      <div class="solidarity-actions">
+        <a class="btn btn-dark" href="casa-solidaria.html">Descubre cómo funciona</a>
+        <a class="btn btn-white" href="publicar.html?formula=intergeneracional">Ofrezco una habitación</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="city-section" id="ciudades">
+    <div class="container">
+      <h2 class="section-title">Las ciudades más buscadas</h2>
+      <div class="city-grid">
+        <a class="city-card" href="ciudad.html?city=madrid"><img src="assets/img/citta-madrid.webp" alt="Madrid"><strong>Madrid</strong></a>
+        <a class="city-card" href="ciudad.html?city=barcelona"><img src="assets/img/citta-barcelona.webp" alt="Barcelona"><strong>Barcelona</strong></a>
+        <a class="city-card" href="ciudad.html?city=valencia"><img src="assets/img/citta-valencia.webp" alt="Valencia"><strong>Valencia</strong></a>
+        <a class="city-card" href="ciudad.html?city=sevilla"><img src="assets/img/citta-sevilla.webp" alt="Sevilla"><strong>Sevilla</strong></a>
+        <a class="city-card" href="ciudad.html?city=granada"><img src="assets/img/citta-granada.webp" alt="Granada"><strong>Granada</strong></a>
+        <a class="city-card" href="ciudad.html?city=salamanca"><img src="assets/img/citta-salamanca.webp" alt="Salamanca"><strong>Salamanca</strong></a>
+        <a class="city-card" href="ciudad.html?city=bilbao"><img src="assets/img/citta-bilbao.webp" alt="Bilbao"><strong>Bilbao</strong></a>
+        <a class="city-card" href="ciudad.html?city=malaga"><img src="assets/img/citta-malaga.webp" alt="Málaga"><strong>Málaga</strong></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="quienes-somos">
+    <div class="publish-banner">
+      <div class="student-illustration" aria-hidden="true">🧑‍🎓</div>
+      <div><h3>Publica gratis</h3><p>Elige el camino que mejor se adapte a tu situación.</p></div>
+      <div class="publish-choice-grid" aria-label="Elige el tipo de publicación">
+        <a class="publish-choice" href="busco.html"><span class="choice-icon" aria-hidden="true">🏠</span><span><strong>Busco alojamiento</strong><small>Publica tu perfil y describe el alojamiento que buscas.</small></span><b aria-hidden="true">›</b></a>
+        <a class="publish-choice" href="publicar.html"><span class="choice-icon" aria-hidden="true">🔑</span><span><strong>Ofrezco alojamiento</strong><small>Publica una habitación, una plaza o un piso.</small></span><b aria-hidden="true">›</b></a>
+        <a class="publish-choice solidarity-choice" href="casa-solidaria.html"><span class="choice-icon" aria-hidden="true">🤝</span><span><strong>Alojamiento solidario</strong><small>Conecta a personas mayores y estudiantes.</small></span><b aria-hidden="true">›</b></a>
+      </div>
+    </div>
+    <div class="stats-strip">
+      <div class="stat"><span class="stat-icon">▤</span><div><strong>Información completa</strong><span>No solo fotografías</span></div></div>
+      <div class="stat"><span class="stat-icon">⌖</span><div><strong>Ciudades universitarias</strong><span>19 mercados universitarios de más de 20.000 estudiantes</span></div></div>
+      <div class="stat"><span class="stat-icon">◇</span><div><strong>Costes comparables</strong><span>Gastos y comisiones declarados</span></div></div>
+      <div class="stat"><span class="stat-icon">◎</span><div><strong>Movilidad europea</strong><span>Universidad, Erasmus y prácticas</span></div></div>
+    </div>
+  </section>
+
+  <section class="city-section" id="faq">
+    <div class="container">
+      <span class="kicker">La claridad está en el producto</span>
+      <h2 class="section-title" style="margin-top:8px">Compara habitaciones y pisos sin sorpresas</h2>
+      <div class="detail-grid">
+        <article class="info-card"><h2>¿Qué compara?</h2><p>Alquiler, gastos, suministros, fianza, estancia mínima, preaviso, honorarios, servicios y distancia a la universidad.</p></article>
+        <article class="info-card"><h2>¿Quién puede publicar?</h2><p>Particulares, agencias, residencias y operadores especializados, indicando con claridad cualquier coste de intermediación.</p></article>
+        <article class="info-card"><h2>¿Dónde está disponible?</h2><p>El buscador cubre las principales ciudades universitarias españolas. La selección cubre 19 ciudades o polos universitarios que superan aproximadamente los 20.000 estudiantes considerando grado, máster y doctorado. La estructura está preparada para compartir un único backend europeo.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contacto">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="font-size:27px"><span>Student<strong>BnB</strong></span></a>
+        <p>La plataforma dedicada al alojamiento universitario: costes, condiciones y servicios comparables con claridad.</p>
+      </div>
+      <div><h3>Explora</h3><div class="footer-links"><a href="ciudad.html">Alojamientos en España</a><a href="estudiantes.html">Estudiantes que buscan</a><a href="busco.html">Busco alojamiento</a><a href="casa-solidaria.html">Alojamiento solidario</a><a href="publicar.html">Publicar anuncio</a></div></div>
+      <div><h3>Proyecto</h3><div class="footer-links"><a href="index.html#como-funciona">Cómo funciona</a><a href="index.html#quienes-somos">Quiénes somos</a><a href="index.html#faq">Preguntas frecuentes</a></div></div>
+      <div><h3>Seguridad</h3><div class="footer-links"><a href="privacidad.html">Privacidad y condiciones</a><a href="privacidad.html#seguridad">Prevención de fraudes</a><a href="mailto:reportes@casastudent.es">Reportar un anuncio</a></div></div>
+    </div>
+    <div class="footer-international"><strong>CasaStudent en Europa</strong><div class="footer-country-links" data-network><a href="https://casastudent.it/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-it.svg" alt="" width="30" height="20"><span>Italia</span><span class="network-open" aria-hidden="true">↗</span></a><a href="index.html" aria-current="page"><img class="network-flag" src="assets/img/flag-es.svg" alt="" width="30" height="20"><span>España</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://casastudent.fr/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-fr.svg" alt="" width="30" height="20"><span>France</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://casastudent.de/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-de.svg" alt="" width="30" height="20"><span>Deutschland</span><span class="network-open" aria-hidden="true">↗</span></a><a href="https://casastudent.pl/" target="_blank" rel="noopener"><img class="network-flag" src="assets/img/flag-pl.svg" alt="" width="30" height="20"><span>Polska</span><span class="network-open" aria-hidden="true">↗</span></a></div></div>
+    <div class="footer-bottom"><span>© 2026 CasaStudent</span><span>España · casastudent.es</span></div>
+  </div>
+</footer>
+<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+  <div class="modal">
+    <button class="modal-close" data-close-modal aria-label="Chiudi">×</button>
+    <h2 id="login-title">Accede a CasaStudent</h2>
+    <p>Guarda búsquedas y favoritos y utiliza los contactos protegidos.</p>
+    <form id="login-form">
+      <div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nombre@email.es"></div>
+      <button class="btn btn-yellow btn-block" type="submit">Continuar</button>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/config.js?v=20260828-footer-links"></script><script src="assets/js/data.js"></script>
+<script src="assets/js/app.js?v=20260828-footer-links"></script>
+<script src="assets/js/studentbnb-brand.js?v=1"></script></body>
+</html>
