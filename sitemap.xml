@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://studentbnb.es/</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=santiago-de-compostela</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=oviedo</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=bilbao</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=pamplona</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=valladolid</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=salamanca</loc></url>
   <url><loc>https://studentbnb.es/ciudad.html?city=madrid</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=alcala-de-henares</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=zaragoza</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=barcelona</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=valencia</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=cordoba</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=sevilla</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=cadiz</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=granada</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=malaga</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=alicante</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=murcia</loc></url>
+  <url><loc>https://studentbnb.es/ciudad.html?city=la-laguna</loc></url>
   <url><loc>https://studentbnb.es/publicar.html</loc></url>
   <url><loc>https://studentbnb.es/busco.html</loc></url>
   <url><loc>https://studentbnb.es/estudiantes.html</loc></url>

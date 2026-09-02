@@ -93,3 +93,14 @@ document.addEventListener('DOMContentLoaded',()=>{
   const login=document.querySelector('#login-title');if(login)login.textContent='Acceder a StudentBnB';
   const f=document.querySelector('.site-footer .container')||document.querySelector('footer');if(f&&!f.querySelector('.casastudent-family')){const b=document.createElement('div');b.className='casastudent-family';b.innerHTML='StudentBnB está pensado para estancias temporales dentro de la comunidad estudiantil. Para una solución más estable visita <a href="https://casastudent.es/">CasaStudent ↗</a>.';f.appendChild(b)}
 });
+
+(function(){
+  const apply=()=>{
+    const canonical=document.querySelector('link[rel="canonical"]')?.href||location.href;
+    const description=document.querySelector('meta[name="description"]')?.content||'';
+    let schema=document.querySelector('#studentbnb-webpage-schema');
+    if(!schema){schema=document.createElement('script');schema.id='studentbnb-webpage-schema';schema.type='application/ld+json';document.head.appendChild(schema);}
+    schema.textContent=JSON.stringify({'@context':'https://schema.org','@type':'WebPage',name:document.title,url:canonical,description,inLanguage:document.documentElement.lang||'es-ES'});
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(apply,0));else setTimeout(apply,0);
+})();

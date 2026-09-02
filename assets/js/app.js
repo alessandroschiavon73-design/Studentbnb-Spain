@@ -10,6 +10,14 @@
   const qs = (s, root=document) => root.querySelector(s);
   const qsa = (s, root=document) => [...root.querySelectorAll(s)];
   const money = n => new Intl.NumberFormat(CONFIG.locale || "es-ES", {style:"currency", currency:CONFIG.currency || "EUR", maximumFractionDigits:0}).format(Number(n)||0);
+  const testStayPrices = listing => {
+    const positive = (...values) => values.map(Number).find((value) => Number.isFinite(value) && value > 0);
+    const monthly = positive(listing.monthly_reference_price, listing.price) ?? 0;
+    const p30 = positive(listing.studentbnbPrice30, listing.studentbnb_price_30) ?? Math.round(monthly * 1.25);
+    const p14 = positive(listing.studentbnbPrice14, listing.studentbnb_price_14) ?? Math.round(p30 / 2);
+    const p7 = positive(listing.studentbnbPrice7, listing.studentbnb_price_7) ?? Math.round(p30 / 4);
+    return { p7, p14, p30, monthly };
+  };
   const formatDate = (iso, fallback="A convenir") => {
     if(!iso) return fallback;
     const date = new Date(`${iso}T12:00:00`);
@@ -223,6 +231,7 @@
     const expenseClass = l.expensesIncluded ? "included" : "excluded";
     const expenseText = l.expensesIncluded ? "● Gastos incluidos" : `● Gastos aparte${l.expenses ? ` (+${money(l.expenses)})` : ""}`;
     const priceClass = l.expensesIncluded ? "" : "expenses-out";
+    const stayPrices = testStayPrices(l);
     return `
       <article class="listing-card" data-id="${escapeHtml(l.id)}">
         <a href="anuncio.html?id=${encodeURIComponent(l.id)}" aria-label="Abrir ${escapeHtml(l.zone)}">
@@ -243,7 +252,8 @@
           </div>
         </div>
         <div class="listing-price">
-          <div class="price ${priceClass}">${money(l.price)}<small>/mes</small></div>
+          <div class="price ${priceClass}">${money(stayPrices.p7)}<small>/7 días</small></div>
+          <div class="test-price-breakdown"><span>14 días ${money(stayPrices.p14)}</span><span>30 días ${money(stayPrices.p30)}</span></div>
           <span class="expenses-badge ${expenseClass}">${expenseText}</span>
         </div>
         <div class="listing-actions">
@@ -262,14 +272,14 @@
     const citySlug = city.slug;
     const cityName = city.name;
     const heroImage = city.heroImage || "assets/img/spagna-proposta1.webp";
-    document.title = `Alojamientos para estudiantes en ${cityName} | CasaStudent`;
-    const seoDescription = `Habitaciones y pisos para estudiantes en ${cityName}, con alquiler, gastos y condiciones comparables.`;
+    document.title = `Estancias StudentBnB en ${cityName} | 1 semana, 2 semanas o 1 mes`;
+    const seoDescription = `Estancias de prueba para estudiantes en ${cityName}: una semana, dos semanas o un mes para conocer casa, zona y compañeros antes de elegir.`;
     const metaDescription = qs('meta[name="description"]');
     if(metaDescription) metaDescription.content = seoDescription;
     updateSeo(document.title, seoDescription);
     if(qs("#city-breadcrumb")) qs("#city-breadcrumb").textContent = cityName;
     if(qs("#city-name")) qs("#city-name").textContent = cityName;
-    if(qs("#city-description")) qs("#city-description").textContent = `Descubre alojamientos en las zonas universitarias de ${cityName}. Cada oferta muestra alquiler, gastos y condiciones de forma clara.`;
+    if(qs("#city-description")) qs("#city-description").textContent = `Prueba durante una semana, dos semanas o un mes cómo es vivir en ${cityName}: casa, zona, desplazamientos y compañeros.`;
     if(qs(".city-hero-bg")) qs(".city-hero-bg").style.backgroundImage = `url('${heroImage}')`;
     const controls = {
       zone: qs("#filter-zone"),
@@ -296,7 +306,7 @@
         if(listingCitySlug(l) !== citySlug) return false;
         if(controls.zone?.value && l.zone !== controls.zone.value) return false;
         if(controls.type?.value && l.type !== controls.type.value) return false;
-        if(controls.price?.value && Number(l.price) > Number(controls.price.value)) return false;
+        if(controls.price?.value && testStayPrices(l).p7 > Number(controls.price.value)) return false;
         if(controls.expenses?.value === "included" && !l.expensesIncluded) return false;
         if(controls.expenses?.value === "excluded" && l.expensesIncluded) return false;
         if(controls.arrangement?.value === "intergenerational" && !l.intergenerational?.enabled) return false;
@@ -333,7 +343,7 @@
     const listingCity = cityBySlug(listingCitySlug(l));
     const robots = qs('meta[name="robots"]');
     if(robots && l.isDemo) robots.content = "noindex,follow";
-    document.title = `${l.type} en ${l.zone}, ${listingCity.name} | CasaStudent`;
+    document.title = `${l.type} en ${l.zone}, ${listingCity.name} | StudentBnB`;
     updateSeo(document.title, `${l.type} en ${l.zone}, ${listingCity.name}: alquiler, gastos, disponibilidad y condiciones.`);
     const detailCityLink = qs("#detail-city-link");
     if(detailCityLink){
@@ -351,6 +361,7 @@
   }
 
   function detailTemplate(l, gallery){
+    const stayPrices = testStayPrices(l);
     const listingCity = cityBySlug(listingCitySlug(l));
     const billList = (l.bills || []).map(x=>`<li>${escapeHtml(x)}</li>`).join("");
     const rules = (l.rules || []).map(x=>`<li>${escapeHtml(x)}</li>`).join("");
@@ -373,7 +384,7 @@
           <div class="top-meta"><span>♙ ${escapeHtml(l.type)}</span><span>⌂ ${escapeHtml(l.arrangement || "")}</span><span>▣ Disponible ${escapeHtml(formatDate(l.availableISO,l.available || ""))}</span>${l.isDemo ? `<span class="demo-badge">Ejemplo demostrativo</span>` : l.verified ? `<span class="verification-badge">✓ Anunciante verificado</span>` : ""}</div>
           ${l.intergenerational?.enabled ? `<span class="solidarity-badge">🤝 Alojamiento solidario intergeneracional</span>` : ""}
         </div>
-        <div class="detail-price"><div class="price">${money(l.price)}<small>/mes</small></div><span class="expenses-badge ${l.expensesIncluded?"included":"excluded"}">${expenseText}</span></div>
+        <div class="detail-price"><div class="price">${money(stayPrices.p7)}<small>/7 días</small><span class="detail-test-prices"><span>14 días ${money(stayPrices.p14)}</span><span>30 días ${money(stayPrices.p30)}</span></span><span class="monthly-reference">Referencia mensual ${money(stayPrices.monthly)}</span></div><span class="expenses-badge ${l.expensesIncluded?"included":"excluded"}">${expenseText}</span></div>
         <button class="favorite-button" data-favorite="${escapeHtml(l.id)}" aria-label="Añadir a favoritos">♡</button>
       </div>
 
@@ -418,12 +429,13 @@
             <dt>Mascotas</dt><dd>${escapeHtml(l.pets || "—")}</dd>
             <dt>Tabaco</dt><dd>${escapeHtml(l.smokers || "—")}</dd>
             <dt>Contrato</dt><dd>${escapeHtml(l.contract || "—")}</dd>
+            <dt>Duraciones StudentBnB</dt><dd>1 semana · 2 semanas · 1 mes</dd>
             ${agency}
           </dl>
         </section>
         <section class="info-card"><h2>Qué está incluido</h2><ul class="check-list">${billList || "<li>Información por confirmar</li>"}</ul></section>
         <div>
-          <section class="info-card cost-card"><h2>Alquiler</h2><div class="price">${money(l.price)}<small>/mes</small></div><strong>${expenseText}</strong></section>
+          <section class="info-card cost-card"><h2>Precios StudentBnB</h2><div class="price">${money(stayPrices.p7)}<small>/7 días</small></div><div class="detail-test-prices"><span>14 días ${money(stayPrices.p14)}</span><span>30 días ${money(stayPrices.p30)}</span></div><span class="monthly-reference">Alquiler mensual de referencia: ${money(stayPrices.monthly)}</span><strong>${expenseText}</strong></section>
           <section class="info-card cost-card" style="margin-top:16px"><h2>Fianza</h2><strong style="font-size:24px">${money(l.deposit)}</strong><br><span>${l.deposit && l.price ? (l.deposit/l.price).toFixed(0)+" mensualidades" : "Por definir"}</span></section>
         </div>
       </div>
@@ -546,7 +558,8 @@
     const included = fd.get("expensesIncluded") === "yes";
     return {
       id, countryCode:CONFIG.countryCode, cityId:cityBySlug(citySlugFromValue(fd.get("city"))).id, city:fd.get("city"), citySlug:fd.get("city"), zone:fd.get("zone"), tag:fd.get("tag") || "nuevo anuncio", type:fd.get("type"),
-      arrangement:fd.get("arrangement"), price:Number(fd.get("price")), expensesIncluded:included,
+      arrangement:fd.get("arrangement"), price:Number(fd.get("price")), monthly_reference_price:Number(fd.get("price")),
+      studentbnbPrice7:Number(fd.get("studentbnbPrice7")||0), studentbnbPrice14:Number(fd.get("studentbnbPrice14")||0), studentbnbPrice30:Number(fd.get("studentbnbPrice30")||0), studentbnb_uplift_percent:Number(fd.get("studentbnbUplift")||25), expensesIncluded:included,
       expenses:included ? 0 : Number(fd.get("expenses")||0), availableISO:fd.get("available"), available:formatDate(fd.get("available"),"A convenir"),
       university:fd.get("university") || "Universidad", universityMinutes:Number(fd.get("universityMinutes")||0),
       centerMinutes:Number(fd.get("centerMinutes")||0), image:"assets/img/alloggio-1.webp",
